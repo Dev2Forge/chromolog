@@ -2,7 +2,7 @@
 
 # Prueba con chromolog instalado desde Pypi - pip install
 # Importar módulo
-from chromolog.chromolog import Print
+from chromolog import Print
 
 # Crear instancia
 pt = Print()
