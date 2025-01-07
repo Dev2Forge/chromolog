@@ -1,3 +1,4 @@
+# Prueba con espositorio descargado localmente
 import sys
 # Añadir ruta para poder acceder localmente
 sys.path.append('../chromolog/')
