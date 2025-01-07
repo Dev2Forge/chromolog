@@ -1,4 +1,4 @@
-# v0.1.0
+# v0.1.1
 class Print:
     """Imprimir mensajes por consola con color de texto (`error`, `warning`, `succes`, `info`)
     """

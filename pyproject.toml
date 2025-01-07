@@ -1,3 +1,26 @@
 [build-system]
-requires = ["setuptools>=42", "wheel"]
+requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "chromolog"
+version = "0.1.1"
+description = "Un micromódulo para imprimir mensajes por consola con texto de color en Python"
+readme = { file = "README.md", content-type = "text/markdown", charset = "utf-8" }
+license = { text = "MIT License" }
+authors = [
+    { name = "Tutos Rive Gamer", email = "msqlitesrmtrg@gmail.com" }
+]
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages]
+find = { include = ["chromolog"] }
+
+[project.urls]
+"Homepage" = "https://tutosrivegamerlq.github.io/chromolog/"
+"Repository" = "https://github.com/TutosRiveGamer/chromolog/"

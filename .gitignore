@@ -1,5 +1,4 @@
 *.pyc
-.pypirc
 __pycache__/
 dist/
 build/
