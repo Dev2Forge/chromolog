@@ -1,8 +1,8 @@
 import sys
 # Añadir ruta para poder acceder localmente
-sys.path.append('../chromalog/')
+sys.path.append('../chromolog/')
 # Importar módulo localmente
-from chromalog.chromalog import Print
+from chromolog.chromolog import Print
 
 # Crear instancia
 pt = Print()
