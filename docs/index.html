@@ -39,7 +39,7 @@
     </div>
     <h1 class="title-header" title="chromolog project, Github"><a target="_blank"
         href="https://github.com/tutosrivegamerLQ/chromolog/">CHROMOLOG</a></h1>
-    <a href="https://pypi.org/project/chromolog/" target="_blank"><img class="img-nav img-repo-module"
+    <a href="https://pypi.org/project/chromolog/0.1.0/" target="_blank"><img class="img-nav img-repo-module"
         title="Package python. Pip install"
         src="https://cdn.jsdelivr.net/gh/tutosrivegamerLQ/images-projects-srm-trg@refs/heads/main/modules/chromalog_logo.webp"
         alt="Logo del proyecto 'chromolog'"></a>
@@ -62,7 +62,7 @@
 </code></pre>
   <p>o</p>
   <pre><code class="language-python"><span class="hljs-comment"># Importe la clase Print del módulo</span>
-<span class="hljs-keyword">from</span> chromolog.chromolog <span class="hljs-keyword">import</span> Print
+<span class="hljs-keyword">from</span> chromolog <span class="hljs-keyword">import</span> Print
 </code></pre>
   <ol start="2" class="f-ul">
     <li>Crear una instancia de la clase <code>Print</code></li>
@@ -74,10 +74,11 @@ p = Print()
     <li>Use los <a href="#m%C3%A9todos-disponibles">métodos disponibles</a>.</li>
   </ol>
   <pre>
-- <a href="#err"><span class="spn-red">err</span>&lpar;err:any&rpar;</a>
-- <a href="#inf"><span class="spn-blue">inf</span>&lpar;inf:any&rpar;</a>
-- <a href="#warn"><span class="spn-yellow">warn</span>&lpar;warn:any&rpar;</a>
-- <a href="#suc"><span class="spn-green">suc</span>&lpar;suc:any&rpar;</a></pre>
+- <a href="#err"><span class="spn-red">err</span>&lpar;err:any&rpar;</a>: Indicado para imprimir los errores 😞
+- <a href="#exc"><span class="spn-red">exc</span>&lpar;exc:Exception&rpar;</a>: Indicado para imprimir información sobre la excepción capturada en bloques `try`
+- <a href="#inf"><span class="spn-blue">inf</span>&lpar;inf:any&rpar;</a>: Indicado para imprimir mensajes de información, variables ℹ
+- <a href="#warn"><span class="spn-yellow">warn</span>&lpar;warn:any&rpar;</a>: Indicado para imprimir mensajes de precacución 😱
+- <a href="#suc"><span class="spn-green">suc</span>&lpar;suc:any&rpar;</a>: Indicado para indicar que la ejecución fue completada con éxito ✅</pre>
 
   <div class="add-container">
     <a target="_blank" href="https://beta.publishers.adsterra.com/referral/SecK2taf6d" rel="nofollow"><img alt="banner"
@@ -98,6 +99,25 @@ p = Print()
   <p><strong>Salida por consola</strong></p>
   <pre><code class="language-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-red">name &#x27;tutosrivegamer&#x27; is not defined</span>
 </code></pre>
+
+  <ul class="f-ul" id="exc">
+    <li><code>exc(exc:Exception)</code>: Indicado para imprimir información sobre la excepción capturada en bloques
+      `try`</li>
+  </ul>
+  <pre><code class="language-python"><span class="hljs-comment"><span class="hljs-number">20</span> # En un bloque try</span>
+<span class="hljs-number">21</span> <span class="hljs-keyword">try</span>:
+<span class="hljs-number">22</span>  <span class="hljs-comment"># Soy literalmente un error</span>
+<span class="hljs-number">23</span>  tutosrivegamer
+<span class="hljs-number">24</span> <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+<span class="hljs-number">25</span>  p.exc(e)
+</code></pre>
+  <p><strong>Salida por consola</strong></p>
+
+  <pre><code class="language-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-red">Exception: NameError
+<span class="hljs-meta">&gt;&gt;&gt; </span>File: c:\Users\srm\Desktop\modules\chromolog\tests\test_local.py
+<span class="hljs-meta">&gt;&gt;&gt; </span>ErrorLine: 23
+<span class="hljs-meta">&gt;&gt;&gt; </span>Messsage: name 'tutosrivegamer' is not defined</span></code></pre>
+
   <hr>
   <ul class="f-ul" id="inf">
     <li><code>inf(inf:any)</code>: Indicado para imprimir mensajes de precacución, variables ℹ</li>
