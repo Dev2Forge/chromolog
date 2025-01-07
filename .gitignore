@@ -6,3 +6,4 @@ build/
 _site/
 node_modules/
 .vscode/
+.chromo_venv
