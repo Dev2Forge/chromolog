@@ -1,5 +1,5 @@
 
-# v0.2.0
+# v0.2.1
 """Micromódulo para imprimir mensajes en consola con texto de colores.
 
 Este módulo permite personalizar mensajes dinámicos en consola, incluyendo
@@ -7,6 +7,7 @@ texto en diferentes colores.
 
 
 Historial de versiones:
+- `v0.2.1`: Actualización de enlaces
 - `v0.2.0`: Mejoras del proyecto, ahora solo debe importar: `import chromolog`.
 - `v0.1.1`: Corrección de errores de la página del proyecto en https://pypi.org
 - `v0.1.0`: Primera versión funcional.
@@ -21,9 +22,7 @@ Si desea conocer más acerca de, visite:
 - [Github project](https://github.com/tutosrivegamerLQ/chromolog/)
 """
 
-import traceback
-
-__version__ = "0.1.1"
+__version__ = "0.2.1"
 __author__ = "Tutos Rive Gamer"
 
 
@@ -99,6 +98,7 @@ class Print:
         Returns:
             `dict`: Diccionario con claves: {`line`: (Línea del error),`path`: (Ruta del archivo de error)}
         """
+        import traceback
         trace_back = traceback.extract_tb(e.__traceback__)
         return {'line': trace_back[-1][1], 'path': trace_back[-1][0]}
 

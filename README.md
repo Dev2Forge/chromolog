@@ -1,4 +1,4 @@
-# chromolog [Versión actual: 0.2.0](https://pypi.org/project/chromolog/)
+# chromolog [Versión actual: 0.2.1](https://pypi.org/project/chromolog/)
 
 Imprima mensajes por consola coloridos y distinguidos de los demás, tenga un formato de salida por consola más elegante y vívido según lo prefiera, ya sea un mensaje de `error` o un mensaje de operación finalizada (`success`).
 
@@ -19,6 +19,8 @@ Visite: https://tutosrivegamerlq.github.io/chromolog/ para más detalles
 
 
 ## Historial de versiones:
+- `v0.2.1`: 
+  - Actualización de links de las páginas de soporte, y mejora de código
 - `v0.2.0`: 
   - Mejoras del proyecto, ahora solo debe importar: `import chromolog`.
   - Nuevos métodos:
