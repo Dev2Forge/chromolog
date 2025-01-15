@@ -1,5 +1,5 @@
 
-# v0.2.1
+# v0.2.2
 """Micromódulo para imprimir mensajes en consola con texto de colores.
 
 Este módulo permite personalizar mensajes dinámicos en consola, incluyendo
@@ -7,6 +7,7 @@ texto en diferentes colores.
 
 
 Historial de versiones:
+- `v0.2.2`: Actualización la versión de python requerida
 - `v0.2.1`: Actualización de enlaces
 - `v0.2.0`: Mejoras del proyecto, ahora solo debe importar: `import chromolog`.
 - `v0.1.1`: Corrección de errores de la página del proyecto en https://pypi.org
@@ -22,7 +23,7 @@ Si desea conocer más acerca de, visite:
 - [Github project](https://github.com/tutosrivegamerLQ/chromolog/)
 """
 
-__version__ = "0.2.1"
+__version__ = "0.2.2"
 __author__ = "Tutos Rive Gamer"
 
 
