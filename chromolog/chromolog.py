@@ -1,5 +1,5 @@
 
-# v0.2.2
+# v0.2.3
 """Micromódulo para imprimir mensajes en consola con texto de colores.
 
 Este módulo permite personalizar mensajes dinámicos en consola, incluyendo
@@ -7,6 +7,7 @@ texto en diferentes colores.
 
 
 Historial de versiones:
+- `v0.2.3`: Errores menores
 - `v0.2.2`: Actualización la versión de python requerida
 - `v0.2.1`: Actualización de enlaces
 - `v0.2.0`: Mejoras del proyecto, ahora solo debe importar: `import chromolog`.
@@ -23,7 +24,7 @@ Si desea conocer más acerca de, visite:
 - [Github project](https://github.com/tutosrivegamerLQ/chromolog/)
 """
 
-__version__ = "0.2.2"
+__version__ = "0.2.3"
 __author__ = "Tutos Rive Gamer"
 
 
@@ -55,7 +56,7 @@ class Print:
             `exc:Exception`: Excepción capturada con bloque try
         """
         trace:dict = self.__traceback(exc)
-        self.err(f'Exception: {exc.__class__.__name__}\nFile: {trace.get('path')}\nErrorLine: {trace.get('line')}\nMesssage: {exc}')
+        self.err(f'Exception: {exc.__class__.__name__}\nFile: {trace.get("path")}\nErrorLine: {trace.get("line")}\nMesssage: {exc}')
 
 
     def inf(self, inf:any) -> None:
@@ -110,8 +111,9 @@ class Print:
             a = ''
             a += 12
         except TypeError as e:
-            self.err(f'err(err) -> Error: {e.__class__.__name__}, Mensaje: {e.__str__()}')
+            self.exc(e)
         self.inf('inf(inf) -> Hello World')
+        self.err(f'err(err) -> Ha ocurrido un error menor')
         self.warn('warn(warn) -> Precaución, tenga cuidado')
         self.suc('suc(suc) -> Ejecución finalizada...')
 
