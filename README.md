@@ -15,7 +15,7 @@ Imprima mensajes por consola coloridos y distinguidos de los demás, tenga un fo
 - `warn(warn:any)`: Indicado para imprimir mensajes de precacución 😱
 - `suc(suc:any)`: Indicado para indicar que la ejecución fue completada con éxito ✅
 
-Visite: https://tutosrivegamerlq.github.io/chromolog/ para más detalles
+Visite: https://tutosrive.github.io/chromolog/ para más detalles
 
 
 ## Historial de versiones:
@@ -33,6 +33,6 @@ Visite: https://tutosrivegamerlq.github.io/chromolog/ para más detalles
 - `v0.1.0`: Primera versión funcional.
 
 Si desea conocer más acerca de, visite:
-- [Web de soporte](https://tutosrivegamerlq.github.io/chromolog/)
+- [Web de soporte](https://tutosrive.github.io/chromolog/)
 - [Web pypi.org](https://pypi.org/project/chromolog/)
-- [Github project](https://github.com/tutosrivegamerLQ/chromolog/)
+- [Github project](https://github.com/tutosrive/chromolog/)

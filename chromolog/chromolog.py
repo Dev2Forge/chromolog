@@ -14,14 +14,14 @@ Historial de versiones:
 - `v0.1.1`: Corrección de errores de la página del proyecto en https://pypi.org
 - `v0.1.0`: Primera versión funcional.
 
-Revise el historial completo aquí: [Historial completo de veriones](https://github.com/tutosrivegamerLQ/chromolog/#historial-de-versiones)
+Revise el historial completo aquí: [Historial completo de veriones](https://github.com/tutosrive/chromolog/#historial-de-versiones)
 
 @author Tutos Rive Gamer
 
 Si desea conocer más acerca de, visite:
-- [Web de soporte](https://tutosrivegamerlq.github.io/chromolog/)
+- [Web de soporte](https://tutosrive.github.io/chromolog/)
 - [Web pypi.org](https://pypi.org/project/chromolog/)
-- [Github project](https://github.com/tutosrivegamerLQ/chromolog/)
+- [Github project](https://github.com/tutosrive/chromolog/)
 """
 
 __version__ = "0.2.3"
