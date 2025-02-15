@@ -1,4 +1,9 @@
-# chromolog [![PyPI Downloads](https://static.pepy.tech/badge/chromolog/month)](https://pepy.tech/projects/chromolog) [Versión actual: 0.2.3](https://pypi.org/project/chromolog/)
+# chromolog [![PyPI Downloads](https://static.pepy.tech/badge/chromolog/month)](https://pepy.tech/projects/chromolog) [Versión actual: 0.2.4](https://pypi.org/project/chromolog/)
+
+```shell
+pip install chromologger
+```
+---
 
 Imprima mensajes por consola coloridos y distinguidos de los demás, tenga un formato de salida por consola más elegante y vívido según lo prefiera, ya sea un mensaje de `error` o un mensaje de operación finalizada (`success`).
 
@@ -15,10 +20,20 @@ Imprima mensajes por consola coloridos y distinguidos de los demás, tenga un fo
 - `warn(warn:any)`: Indicado para imprimir mensajes de precacución 😱
 - `suc(suc:any)`: Indicado para indicar que la ejecución fue completada con éxito ✅
 
+> Mismos métodos pero con fondo de color
+- `err_bg(err:any)`: Indicado para imprimir los errores 😞
+- `exc_bg(exc:any)`: Indicado para imprimir información sobre la excepción capturada en bloques `try`
+- `inf_bg(inf:any)`: Indicado para imprimir mensajes de información, variables ℹ
+- `warn_bg(warn:any)`: Indicado para imprimir mensajes de precacución 😱
+- `suc_bg(suc:any)`: Indicado para indicar que la ejecución fue completada con éxito ✅
+
 Visite: https://tutosrive.github.io/chromolog/ para más detalles
 
 
 ## Historial de versiones:
+- `v0.2.4`: 
+  - Agregué "_nuevos_" métodos (Misma funcionalidad pero fondo de color .-.)
+  - Corrección de enlaces (Cambié mi nombre de usuario en **GitHub**)
 - `v0.2.3`: 
   - Errores menores
 - `v0.2.2`: 

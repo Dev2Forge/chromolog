@@ -23,6 +23,25 @@
 
     gtag('config', 'G-44SK7V94B8');
   </script>
+
+  <style>
+    .bg-blue{
+      background-color: rgb(0, 127, 201);
+      color: black;
+    }
+    .bg-yellow{
+      background-color: rgb(236, 240, 0);
+      color: black;
+    }
+    .bg-green{
+      background-color: rgb(49, 173, 0);
+      color: rgb(255, 255, 255);
+    }
+    .bg-red{
+      background-color: rgb(201, 0, 0);
+      color: rgb(255, 255, 255);
+    }
+  </style>
 </head>
 
 <body class="vscode-body vscode-dark">
@@ -75,11 +94,21 @@ p = Print()
     <li>Use los <a href="#m%C3%A9todos-disponibles">métodos disponibles</a>.</li>
   </ol>
   <pre>
+# Métodos con texto de color
 - <a href="#err"><span class="spn-red">err</span>&lpar;err:any&rpar;</a>: Indicado para imprimir los errores 😞
 - <a href="#exc"><span class="spn-red">exc</span>&lpar;exc:Exception&rpar;</a>: Indicado para imprimir información sobre la excepción capturada en bloques `try`
 - <a href="#inf"><span class="spn-blue">inf</span>&lpar;inf:any&rpar;</a>: Indicado para imprimir mensajes de información, variables ℹ
 - <a href="#warn"><span class="spn-yellow">warn</span>&lpar;warn:any&rpar;</a>: Indicado para imprimir mensajes de precacución 😱
 - <a href="#suc"><span class="spn-green">suc</span>&lpar;suc:any&rpar;</a>: Indicado para indicar que la ejecución fue completada con éxito ✅</pre>
+<!-- Mismos métodos, pero con fondo de color -->
+<pre>
+# Métodos con fondo de color  
+- <a href="#err_bg"><span class="spn-red bg-red">err_bg</span>&lpar;err:any&rpar;</a>: Indicado para imprimir los errores 😞
+- <a href="#exc_bg"><span class="spn-red bg-red">exc_bg</span>&lpar;exc:Exception&rpar;</a>: Indicado para imprimir información sobre la excepción capturada en bloques `try`
+- <a href="#inf_bg"><span class="spn-blue bg-blue">inf_bg</span>&lpar;inf:any&rpar;</a>: Indicado para imprimir mensajes de información, variables ℹ
+- <a href="#warn_bg"><span class="spn-yellow bg-yellow">warn_bg</span>&lpar;warn:any&rpar;</a>: Indicado para imprimir mensajes de precacución 😱
+- <a href="#suc_bg"><span class="spn-green bg-green">suc_bg</span>&lpar;suc:any&rpar;</a>: Indicado para indicar que la ejecución fue completada con éxito ✅</pre>
+</pre>
 
   <h1 id="métodos-disponibles">Métodos Disponibles</h1>
   <ul class="f-ul" id="err">
@@ -159,6 +188,89 @@ p.suc(<span class="hljs-string">&#x27;Se ha ejecutado la operación exitosamente
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-blue">9 x 10: 90</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-blue">10 x 10: 100</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span> <span class="spn-green">Se ha ejecutado la operación exitosamente</span>
+</code></pre>
+
+<!-- Nuevos métodos -->
+
+<h2>Métodos con <strong>fondo de color</strong></h2>
+
+<ul class="f-ul" id="err">
+  <li><code><span class="bg-red">err_bg(err:any)</span></code>: Indicado para imprimir los errores 😞</li>
+</ul>
+<pre><code class="language-python"><span class="hljs-comment"># En un bloque try</span>
+<span class="hljs-keyword">try</span>:
+  <span class="hljs-comment"># Soy literalmente un error</span>
+  tutosrivegamer
+<span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+  p.err_bg(e)
+</code></pre>
+<p><strong>Salida por consola</strong></p>
+<pre><code class="language-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-red bg-red">name &#x27;tutosrivegamer&#x27; is not defined</span>
+</code></pre>
+
+<ul class="f-ul" id="exc">
+  <li><code><span class="bg-red">exc_bg(exc:Exception)</span></code>: Indicado para imprimir información sobre la excepción capturada en bloques
+    `try`</li>
+</ul>
+<pre><code class="language-python"><span class="hljs-comment"><span class="hljs-number">20</span> # En un bloque try</span>
+<span class="hljs-number">21</span> <span class="hljs-keyword">try</span>:
+<span class="hljs-number">22</span>  <span class="hljs-comment"># Soy literalmente un error</span>
+<span class="hljs-number">23</span>  tutosrivegamer
+<span class="hljs-number">24</span> <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+<span class="hljs-number">25</span>  p.exc_bg(e)
+</code></pre>
+<p><strong>Salida por consola</strong></p>
+
+<pre><code class="language-py"><span class="hljs-meta bg-red">&gt;&gt;&gt; </span><span class="spn-red bg-red">Exception: NameError
+<span class="hljs-meta">&gt;&gt;&gt; </span>File: c:\Users\srm\Desktop\modules\chromolog\tests\test_local.py
+<span class="hljs-meta">&gt;&gt;&gt; </span>ErrorLine: 23
+<span class="hljs-meta">&gt;&gt;&gt; </span>Messsage: name 'tutosrivegamer' is not defined</span></code></pre>
+
+<hr>
+<ul class="f-ul" id="inf">
+  <li><code><span class="bg-blue">inf_bg(inf:any)</span></code>: Indicado para imprimir mensajes de precacución, variables ℹ</li>
+</ul>
+<pre><code class="language-python"><span class="hljs-comment"># Darle la bienvenida al usuario</span>
+p.inf_bg(<span class="hljs-string">&#x27;Bienbenido a chromolog&#x27;</span>)
+</code></pre>
+<p><strong>Salida por consola</strong></p>
+<pre><code class="language-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-blue bg-blue">Bienbenido a chromolog</span>
+</code></pre>
+<hr>
+<ul class="f-ul" id="warn">
+  <li><code><span class="bg-yellow">warn_bg(warn:any)</span></code>: Indicado para imprimir mensajes de precacución 😱</li>
+</ul>
+<pre><code class="language-python"><span class="hljs-comment"># Variable edad</span>
+age:<span class="hljs-built_in">int</span> = <span class="hljs-number">17</span>
+<span class="hljs-comment"># Validación menor de edad</span>
+<span class="hljs-keyword">if</span> age &lt; <span class="hljs-number">18</span>:
+  p.warn_bg(<span class="hljs-string">&#x27;Eres menor de edad, no puedes pasar&#x27;</span>)
+</code></pre>
+<p><strong>Salida por consola</strong></p>
+<pre><code class="language-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-yellow bg-yellow">Eres menor de edad, no puedes pasar</span>
+</code></pre>
+<hr>
+<ul class="f-ul" id="suc">
+  <li><code><span class="bg-green">suc_bg(suc:any)</span></code>: Indicado para indicar que la ejecución fue completada con éxito ✅</li>
+</ul>
+<pre><code class="language-python"><span class="hljs-comment"># Tabla de multiplicar del 10</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">11</span>):
+  <span class="hljs-comment"># Imprimir resultado como &quot;información&quot;</span>
+  p.inf_bg(<span class="hljs-string">f&#x27;<span class="hljs-subst">{i}</span> x 10: <span class="hljs-subst">{i*<span class="hljs-number">10</span>}</span>&#x27;</span>)
+p.suc_bg(<span class="hljs-string">&#x27;Se ha ejecutado la operación exitosamente&#x27;</span>)
+</code></pre>
+<p><strong>Salida por consola</strong></p>
+<pre><code class="language-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-blue bg-blue">1 x 10: 10</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-blue bg-blue">2 x 10: 20</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-blue bg-blue">3 x 10: 30</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-blue bg-blue">4 x 10: 40</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-blue bg-blue">5 x 10: 50</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-blue bg-blue">6 x 10: 60</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-blue bg-blue">7 x 10: 70</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-blue bg-blue">8 x 10: 80</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-blue bg-blue">9 x 10: 90</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="spn-blue bg-blue">10 x 10: 100</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span> <span class="spn-green bg-green">Se ha ejecutado la operación exitosamente</span>
 </code></pre>
   <footer style="text-align: center; margin: 10px auto;">&copy;SRM-TRG 2025</footer>
 </body>
