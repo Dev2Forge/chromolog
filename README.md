@@ -1,19 +1,21 @@
 # chromolog [Versión actual: 0.2.4](https://pypi.org/project/chromolog/)
 
-<!-- Badges -->
+  <!-- Badges -->
   <div>
-<!-- Total downloads -->
+    <!-- Total downloads -->
     <a href="https://pepy.tech/projects/chromolog"><img src="https://static.pepy.tech/badge/chromolog" alt="PyPI Downloads"></a>
-<!-- Python versions supported -->
-    <a href="https://python.org/"><img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/chromologger"></a> 
-<!-- Author -->
+    <!-- Versión actual -->
+    <a href="https://pypi.org/project/chromolog/"><img alt="PyPI - Version" src="https://img.shields.io/pypi/v/chromolog?label=chromolog"></a>
+    <!-- Python versions supported -->
+    <a href="https://python.org/"><img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/chromolog"></a> 
+    <!-- Author -->
     <a href="https://github.com/tutosrive"><img alt="Static Badge" src="https://img.shields.io/badge/Tutos%20Rive-Author-brightgreen"></a>
-<!-- Licencia -->
+    <!-- Licencia -->
     <a href="https://raw.githubusercontent.com/tutosrive/chromolog/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/tutosrive/chromolog"></a>
   </div>
 
 ```shell
-pip install chromologger
+pip install chromolog
 ```
 ---
 
