@@ -1,5 +1,5 @@
 - <span class="spn-green"># pip install chromolog</span>
-- <span class="spn-green"># Esto instalará la versión más reciente (v0.2.3)</span>
+- <span class="spn-green"># Esto instalará la versión más reciente (v0.2.5)</span>
 
 # Inicialización
 
