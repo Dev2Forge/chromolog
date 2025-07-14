@@ -1,6 +1,4 @@
-# chromolog [Versión actual: 0.2.4](https://pypi.org/project/chromolog/)
-
----
+# Chromolog
 
 <div align="center" style="display: flex; align-items: center; justify-content: center; margin: 10px 0; gap: 10px; max-height: 48px; height: 48px;">
   <a href="https://github.com/sponsors/tutosrive" target="_blank">
@@ -35,6 +33,11 @@ pip install chromolog
 
 Imprima mensajes por consola coloridos y distinguidos de los demás, tenga un formato de salida por consola más elegante y vívido según lo prefiera, ya sea un mensaje de `error` o un mensaje de operación finalizada (`success`).
 
+Visite: https://docs.dev2forge.software/chromolog/ para más detalles
+
+> Descarga nuestro nuevo proyecto: [`pip install bridgex`](https://github.com/Dev2Forge/bridgex)
+> <div align="center"><img src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/pymd/bridgex/bridgex-logo-animated.webp" width="200"></div>
+
 # Inicialización
 
 1. Importación del módulo
@@ -55,10 +58,9 @@ Imprima mensajes por consola coloridos y distinguidos de los demás, tenga un fo
 - `warn_bg(warn:any)`: Indicado para imprimir mensajes de precacución 😱
 - `suc_bg(suc:any)`: Indicado para indicar que la ejecución fue completada con éxito ✅
 
-Visite: https://docs.dev2forge.software/chromolog/ para más detalles
-
-
 ## Historial de versiones:
+- `v0.2.5`: 
+  - Corrección de los colores en windows, actualización de la versión de python requerida, y corrección de errores menores.
 - `v0.2.4`: 
   - Agregué "_nuevos_" métodos (Misma funcionalidad pero fondo de color .-.)
   - Corrección de enlaces (Cambié mi nombre de usuario en **GitHub**)

@@ -1,12 +1,12 @@
 
-# v0.2.4
+# v0.2.5
 """Micromódulo para imprimir mensajes en consola con texto de colores.
 
 Este módulo permite personalizar mensajes dinámicos en consola, incluyendo
 texto en diferentes colores.
 
-
 Historial de versiones:
+- `v0.2.5`: Corrección de los colores en windows, actualización de la versión de python requerida, y corrección de errores menores.
 - `v0.2.4`: Añadí "nuevos" métodos `sug_bg`, `warn_bg`, `err_bg`, `exc_bg`, `inf_bg` los cuales y actualicé los links
 - `v0.2.3`: Errores menores
 - `v0.2.2`: Actualización la versión de python requerida
@@ -15,34 +15,37 @@ Historial de versiones:
 - `v0.1.1`: Corrección de errores de la página del proyecto en https://pypi.org
 - `v0.1.0`: Primera versión funcional.
 
-Revise el historial completo aquí: [Historial completo de veriones](https://github.com/tutosrive/chromolog/#historial-de-versiones)
+Revise el historial completo aquí: [Historial completo de veriones](https://github.com/Dev2Forge/chromolog/#historial-de-versiones)
 
-@author Tutos Rive Gamer
+@author Tutos Rive
 
 Si desea conocer más acerca de, visite:
-- [Web de soporte](https://tutosrive.github.io/chromolog/)
+- [Web de soporte](https://docs.dev2forge.software/chromolog/)
 - [Web pypi.org](https://pypi.org/project/chromolog/)
-- [Github project](https://github.com/tutosrive/chromolog/)
+- [Github project](https://github.com/Dev2Forge/chromolog/)
 """
 
-__version__ = "0.2.4"
-__author__ = "Tutos Rive"
+# Soluciona el problema de colores en Windows
+import colorama
+colorama.init(autoreset=True)
 
+__version__ = "0.2.5"
+__author__ = "Tutos Rive"
 
 class Print:
     """Imprimir mensajes por consola con color de texto (`error`, `warning`, `succes`, `info`)
     """
     def __init__(self) -> None:
-        self.RES = '\u001B[0m' # Resetear color
-        self.RED = '\u001B[31m'
-        self.YELLOW = '\u001B[33m'
-        self.BLUE = '\u001B[34m'
-        self.GREEN = '\u001B[32m'
-        self.BG_RED = '\u001b[41m' # Fondo rojo
-        self.BG_BLUE = '\u001b[44m' # Fondo azul
-        self.BG_YELLOW = '\u001b[43m' # Fondo amarillo
-        self.BG_GREEN = '\u001b[42m' # Fondo verde
-    
+        # self.RES = colorama.Style.RESET_ALL
+        self.RED = colorama.Fore.RED
+        self.YELLOW = colorama.Fore.YELLOW
+        self.BLUE = colorama.Fore.BLUE
+        self.GREEN = colorama.Fore.GREEN
+        self.BG_RED = colorama.Back.RED
+        self.BG_BLUE = colorama.Back.BLUE
+        self.BG_YELLOW = colorama.Back.YELLOW
+        self.BG_GREEN = colorama.Back.GREEN
+
     def __str__(self):
         return f'Módulo: chromolog\nClase principal: `Print`\nVersión: {__version__}\nAutor: {__author__}'
 
@@ -52,7 +55,7 @@ class Print:
         Args:
             `err:any`: Error que se imprimirá
         """
-        self.__w(f'{self.RED}{err}{self.RES}')
+        self.__w(f'{self.RED}{err}')
     
     def err_bg(self, err: any) -> None:
         """Imprimir errores (Color Texto: Blanco, Color Fondo: Rojo)
@@ -60,7 +63,7 @@ class Print:
         Args:
             `err:any`: Error que se imprimirá
         """
-        self.__w(f'{self.BG_RED}{err}{self.RES}')
+        self.__w(f'{self.BG_RED}{err}')
     
     def exc(self, exc: Exception) -> None:
         """Imprimir errores de Excepciones específicas (Color Texto: Rojo)
@@ -86,7 +89,7 @@ class Print:
         Args:
             `inf:any`: Información que se imprimirá
         """
-        self.__w(f'{self.BLUE}{inf}{self.RES}')
+        self.__w(f'{self.BLUE}{inf}')
 
     def inf_bg(self, inf: any) -> None:
         """Imprimir información (Color Texto: (Por defecto, según contraste), Color Fondo: Azul)
@@ -94,7 +97,7 @@ class Print:
         Args:
             `inf:any`: Información que se imprimirá
         """
-        self.__w(f'{self.BG_BLUE}{inf}{self.RES}')
+        self.__w(f'{self.BG_BLUE}{inf}')
 
     def warn(self, warn:any) -> None:
         """Imprimir mensajes de precaución (Color Texto: Amarillo)
@@ -102,14 +105,14 @@ class Print:
         Args:
             `warn:any`: Mensaje que se imprimirá
         """
-        self.__w(f'{self.YELLOW}{warn}{self.RES}')
+        self.__w(f'{self.YELLOW}{warn}')
 
     def warn_bg(self, warn: any) -> None:
         """Imprimir mensajes de precaución (Color Texto: (Por defecto, según contraste), Color Fondo: Amarillo)  
            Args:
                `warn:any`: Mensaje que se imprimirá
         """
-        self.__w(f'{self.BG_YELLOW}{warn}{self.RES}')
+        self.__w(f'{self.BG_YELLOW}{warn}')
 
     def suc(self, suc:any) -> None:
         """Imprimir mensajes de éxito (Final de ejecución, podría ser...) (Color Texto: Verde)
@@ -117,7 +120,7 @@ class Print:
         Args:
             `suc:any`: Mensaje que se imprimirá
         """
-        self.__w(f'{self.GREEN}{suc}{self.RES}')
+        self.__w(f'{self.GREEN}{suc}')
 
     def suc_bg(self, suc:any) -> None:
         """Imprimir mensajes de éxito (Final de ejecución, podría ser...) (Color Texto: (Por defecto, según contraste), Color Fondo: Verde)
@@ -125,7 +128,7 @@ class Print:
         Args:
             `suc:any`: Mensaje que se imprimirá
         """
-        self.__w(f'{self.BG_GREEN}{suc}{self.RES}')
+        self.__w(f'{self.BG_GREEN}{suc}')
 
     def __w(self, msg:any) -> None:
         """Imprimir mensaje con colores

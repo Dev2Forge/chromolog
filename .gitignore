@@ -2,10 +2,9 @@
 **/__pycache__/
 dist/
 build/
-*.egg-info/
+**/*.egg-info/
 _site/
 node_modules/
 .vscode/
 .chromo_venv
-pyproject.toml
-MANIFEST.in
+.venv/
