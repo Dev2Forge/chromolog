@@ -36,7 +36,7 @@ Imprima mensajes por consola coloridos y distinguidos de los demás, tenga un fo
 Visite: https://docs.dev2forge.software/chromolog/ para más detalles
 
 > Descarga nuestro nuevo proyecto: [`pip install bridgex`](https://github.com/Dev2Forge/bridgex)
-> <div align="center"><img src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/pymd/bridgex/bridgex-logo-animated.webp" width="200"></div>
+> <div align="center"><img src="https://cdn.jsdelivr.net/gh/tutosrive/images-projects-srm-trg@main/dev2forge/pymd/bridgex/preview-1-main.png" width="200"></div>
 
 # Inicialización
 
